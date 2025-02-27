@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Light Theme Colors */
+:root {
+  --card: oklch(1 0.85 0); /* Light Card Color */
+  --card-foreground: oklch(0.2 0 0); /* Light Card Text Color */
+  --popover: oklch(0.98 0.1 0); /* Light Popover Background */
+  --popover-foreground: oklch(0.2 0 0); /* Light Popover Text Color */
+  --primary: oklch(0.4 0.8 0.5); /* Light Primary Green */
+  --primary-foreground: oklch(1 0 0); /* Light Primary Text Color */
+  --secondary: oklch(0.6 0.4 0.1); /* Light Secondary Color */
+  --secondary-foreground: oklch(0.2 0 0); /* Light Secondary Text Color */
+  --muted: oklch(0.9 0 0); /* Light Muted Color */
+  --muted-foreground: oklch(0.3 0 0); /* Light Muted Text Color */
+  --accent: oklch(0.6 0.5 0.2); /* Light Accent Color */
+  --accent-foreground: oklch(0.2 0 0); /* Light Accent Text Color */
+  --destructive: oklch(0.9 0.4 0); /* Light Destructive Color */
+  --destructive-foreground: oklch(0.2 0 0); /* Light Destructive Text Color */
+  --border: oklch(0.8 0 0); /* Light Border Color */
+  --input: oklch(0.9 0 0); /* Light Input Color */
+  --ring: oklch(0.8 0 0); /* Light Ring Color */
+  --background: oklch(0.9 0 0); /* Light Gray Background Color */
+  --foreground: oklch(0.2 0 0); /* Light Text Color */
+}
+
+/* Dark Theme Colors */
+.dark {
+  --background: oklch(0.15 0 0); /* Dark Gray Background Color */
+  --foreground: oklch(0.9 0 0); /* Dark Text Color */
+  --card: oklch(0.15 0 0); /* Dark Card Color */
+  --card-foreground: oklch(0.9 0 0); /* Dark Card Text Color */
+  --popover: oklch(0.15 0 0); /* Dark Popover Background */
+  --popover-foreground: oklch(0.9 0 0); /* Dark Popover Text Color */
+  --primary: oklch(0.4 0.8 0.5); /* Dark Primary Green */
+  --primary-foreground: oklch(0.1 0 0); /* Dark Primary Text Color */
+  --secondary: oklch(0.3 0.5 0); /* Dark Secondary Color */
+  --secondary-foreground: oklch(0.9 0 0); /* Dark Secondary Text Color */
+  --muted: oklch(0.2 0 0); /* Dark Muted Color */
+  --muted-foreground: oklch(0.7 0 0); /* Dark Muted Text Color */
+  --accent: oklch(0.3 0.5 0); /* Dark Accent Color */
+  --accent-foreground: oklch(0.9 0 0); /* Dark Accent Text Color */
+  --destructive: oklch(0.6 0.2 0); /* Dark Destructive Color */
+  --destructive-foreground: oklch(0.8 0.8 0); /* Dark Destructive Text Color */
+  --border: oklch(0.2 0 0); /* Dark Border Color */
+  --input: oklch(0.2 0 0); /* Dark Input Color */
+  --ring: oklch(0.5 0 0); /* Dark Ring Color */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+/* Base Styles */
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
